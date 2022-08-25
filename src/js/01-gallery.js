@@ -36,12 +36,16 @@ function onGalleryListClick(e) {
     e.preventDefault()
 
     if (!e.target.classList.contains('gallery__image')) return;
-    const lightbox = new SimpleLightbox('.gallery a', {
-        captionsData: 'alt',
-        captionPosition: 'bottom',
-        captionDelay: 250,
-    });
+    imageModalClick();
+
 }
+
+new SimpleLightbox('.gallery a', {
+    captionsData: 'alt',
+    captionPosition: 'bottom',
+    captionDelay: 250,
+});
+
 
 //     const url = getOriginalImgUrl(e); 
 //     instance = createModal(url);
