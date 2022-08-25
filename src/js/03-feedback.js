@@ -17,6 +17,7 @@ populateForm();
 
 function onFormSubmit(e) {
     e.preventDefault()
+
     const formDataToSend = new FormData(e.currentTarget);
     formDataToSend.forEach((value, name) => {
         formData[name] = value
@@ -37,6 +38,7 @@ function populateForm() {
 
     if (savedMessage) {
         const { email, message } = JSON.parse(savedMessage)
+
         refs.formBox.email.value = email
         refs.formBox.message.value = message
         formData.email = email
